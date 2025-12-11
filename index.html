@@ -2,15 +2,13 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <!-- Добавлены мета-теги для лучшей поддержки iPhone -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мой билет</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" />
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <!-- Код остается точно таким же, как в первом варианте -->
     <div class="main-container">
       <div class="root">
         <div class="groups">
@@ -22,7 +20,6 @@
           <div class="groups-3">
             <div class="groups-4">
               <div class="background">
-                <!-- Добавлены id для времени и даты -->
                 <span id="current-time" class="time">14:34</span>
                 <span id="current-date" class="date">6 декабря</span>
                 <div class="image-5"></div>
@@ -32,7 +29,6 @@
               <div class="groups-7">
                 <div class="flex-row">
                   <div class="background-8"></div>
-                  <!-- Добавлены id для минут и секунд -->
                   <span id="seconds" class="number-20">00</span>
                   <span id="minutes" class="number-44">59</span>
                 </div>
@@ -61,7 +57,6 @@
                 <div class="image-d"></div>
               </div>
               <div class="groups-e">
-                <!-- Добавлены contenteditable и id для редактируемых полей -->
                 <span id="editable-text" class="ab-531-25" contenteditable="true">AB 531 25</span>
                 <span id="editable-number" class="no-95" contenteditable="true">№95</span>
               </div>
@@ -104,7 +99,6 @@
       <div class="background-1f"></div>
     </div>
 
-    <!-- Добавлен JavaScript -->
     <script>
       // Функция для обновления времени и даты
       function updateDateTime() {

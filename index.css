@@ -5,218 +5,41 @@
     "Source Han Sans CN", sans-serif;
 }
 
-/* Добавлены стили для поддержки iPhone */
-@supports (padding: max(0px)) {
-  body, .main-container, .root {
-    padding-left: min(0vmin, env(safe-area-inset-left));
-    padding-right: min(0vmin, env(safe-area-inset-right));
-    padding-top: min(0vmin, env(safe-area-inset-top));
-    padding-bottom: min(0vmin, env(safe-area-inset-bottom));
-  }
-}
-
-.main-container {
-  overflow: hidden;
-}
-
-.main-container,
-.main-container * {
+* {
   box-sizing: border-box;
 }
 
-input,
-select,
-textarea,
-button {
-  outline: 0;
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
 
-/* Базовые стили для десктопа */
+/* БАЗОВЫЕ СТИЛИ ДЛЯ ВСЕХ УСТРОЙСТВ */
 .main-container {
   position: relative;
-  width: 790px;
-  height: 1440px;
+  width: 100%;
+  max-width: 790px; /* Максимальная ширина как в макете */
+  min-height: 100vh;
   margin: 0 auto;
   background: rgba(0, 0, 0, 0);
   overflow: hidden;
 }
 
-/* Медиа-запрос для iPhone 14 и других мобильных устройств */
-@media only screen and (max-width: 428px) {
-  .main-container {
-    width: 100%;
-    height: 100vh;
-    max-width: 100%;
-    margin: 0;
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
-  }
-  
-  .root {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .groups,
-  .image-2,
-  .groups-3,
-  .groups-4,
-  .background,
-  .background-6,
-  .groups-9,
-  .background-a,
-  .groups-f,
-  .background-14 {
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    box-sizing: border-box;
-  }
-  
-  .background {
-    border-radius: 20px 20px 0 0 !important;
-    margin: 10px !important;
-    width: calc(100% - 20px) !important;
-  }
-  
-  .background-6 {
-    margin: 10px !important;
-    width: calc(100% - 20px) !important;
-    background-size: contain !important;
-  }
-  
-  .background-a {
-    background-size: contain !important;
-  }
-  
-  .groups-9 {
-    margin: 10px !important;
-    width: calc(100% - 20px) !important;
-  }
-  
-  /* Уменьшение шрифтов для мобильных */
-  .time {
-    font-size: 32px !important;
-    right: 55% !important;
-  }
-  
-  .date {
-    font-size: 32px !important;
-    right: 5% !important;
-  }
-  
-  .number-44,
-  .number-20 {
-    font-size: 60px !important;
-  }
-  
-  .ab-531-25 {
-    font-size: 48px !important;
-    margin-left: 10% !important;
-  }
-  
-  .no-95 {
-    font-size: 40px !important;
-    margin-left: 20% !important;
-  }
-  
-  .my-ticket {
-    font-size: 30px !important;
-    right: 40% !important;
-  }
-  
-  .buy-ticket,
-  .present {
-    font-size: 22px !important;
-  }
-  
-  .flex-row {
-    width: 90% !important;
-    right: 5% !important;
-  }
-  
-  .groups-f {
-    margin: 20px !important;
-    width: calc(100% - 40px) !important;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .button-10,
-  .button-12 {
-    width: 100% !important;
-    position: relative !important;
-    right: 0 !important;
-  }
-  
-  .background-11,
-  .background-13 {
-    width: 90% !important;
-    margin: 0 auto !important;
-  }
-  
-  /* Адаптация нижнего меню */
-  .background-14 {
-    position: fixed !important;
-    bottom: 0;
-    width: 100%;
-    height: 80px;
-  }
-  
-  .groups-15 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .groups-16,
-  .groups-18,
-  .groups-1b,
-  .groups-1d {
-    position: relative !important;
-    width: auto !important;
-    height: auto !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    margin: 0 !important;
-  }
-  
-  .image-17,
-  .image-19,
-  .image-1c,
-  .image-1e {
-    width: 25px !important;
-    height: 25px !important;
-    margin: 5px auto !important;
-  }
-  
-  .history,
-  .my-ticket-1a,
-  .payment,
-  .menu {
-    font-size: 12px !important;
-    margin: 2px 0 !important;
-    text-align: center;
-  }
-}
-
-/* Остальные стили остаются как были, но с добавлением !important для переопределения */
 .root {
-  position: absolute;
-  height: 1440px;
-  top: 0;
-  right: 0;
-  left: 0;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
   background: rgba(252, 252, 252, 0);
 }
+
+/* СТИЛИ ДЛЯ ДЕСКТОПА (остаются как были, но с добавлением %) */
 .groups {
   position: relative;
-  width: 790px;
+  width: 100%;
   height: 106px;
-  margin: 0 0 0 0;
   background: rgba(0, 0, 0, 0);
   z-index: 48;
 }
@@ -226,14 +49,15 @@ button {
   justify-content: flex-start;
   position: absolute;
   height: 43px;
-  right: 550px;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 36px;
   color: #505259;
   font-family: Inter, var(--default-font-family);
   font-size: 38.599998474121094px;
   font-weight: 500;
   line-height: 43px;
-  text-align: left;
+  text-align: center;
   white-space: nowrap;
   z-index: 52;
 }
@@ -261,38 +85,32 @@ button {
 }
 .image-2 {
   position: relative;
-  width: 790px;
-  height: 1201px;
-  margin: 0 0 0 0;
+  width: 100%;
+  height: auto;
   background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/ACPDDKQJXV.png)
     no-repeat center;
   background-size: cover;
   z-index: 15;
-  overflow: visible auto;
 }
 .groups-3 {
   position: relative;
-  width: 790px;
-  height: 960px;
-  margin: 3px 0 0 0;
+  width: 100%;
+  height: auto;
   background: rgba(0, 0, 0, 0);
   z-index: 23;
-  overflow: visible auto;
 }
 .groups-4 {
   position: relative;
-  width: 742px;
+  width: 94%;
   height: 116px;
-  margin: 46px 0 0 27px;
+  margin: 46px auto 0;
   background: rgba(0, 0, 0, 0);
   z-index: 43;
-  overflow: visible auto;
 }
 .background {
   position: relative;
-  width: 730px;
+  width: 100%;
   height: 115px;
-  margin: 2px 0 0 6px;
   background: #3b4048;
   border: 1px solid #696776;
   z-index: 44;
@@ -304,7 +122,7 @@ button {
   justify-content: flex-start;
   position: absolute;
   height: 52px;
-  right: 505px;
+  left: 20%;
   bottom: 33px;
   color: #e9e9ea;
   font-family: Inter, var(--default-font-family);
@@ -321,7 +139,7 @@ button {
   justify-content: flex-start;
   position: absolute;
   height: 58px;
-  right: 28px;
+  right: 5%;
   bottom: 25px;
   color: #e2e3e4;
   font-family: Inter, var(--default-font-family);
@@ -336,7 +154,8 @@ button {
   position: absolute;
   width: 50px;
   height: 50px;
-  right: 647px;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 32px;
   background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/yN9xjPs7yh.png)
     no-repeat center;
@@ -345,28 +164,28 @@ button {
 }
 .background-6 {
   position: relative;
-  width: 732px;
+  width: 93%;
   height: 236px;
-  margin: 1px 0 0 32px;
+  margin: 1px auto 0;
   background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/fUD5nFbQNe.png)
     no-repeat center;
-  background-size: cover;
+  background-size: contain;
   z-index: 37;
-  overflow: visible auto;
 }
 .groups-7 {
   position: relative;
-  width: 733px;
+  width: 100%;
   height: 229px;
-  margin: 6px 0 0 -1px;
+  margin: 6px 0 0;
   background: rgba(0, 0, 0, 0);
   z-index: 36;
 }
 .flex-row {
   position: absolute;
-  width: 478px;
+  width: 70%;
   height: 156px;
-  right: 128px;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 39px;
   z-index: 42;
 }
@@ -374,7 +193,8 @@ button {
   position: absolute;
   width: 2px;
   height: 156px;
-  right: 237px;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 0;
   background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/76p9JdsuUf.png)
     no-repeat center;
@@ -404,7 +224,7 @@ button {
   justify-content: flex-start;
   position: absolute;
   height: 86px;
-  right: 364px;
+  left: 0;
   bottom: 60px;
   color: #42454e;
   font-family: Inter, var(--default-font-family);
@@ -420,9 +240,10 @@ button {
   align-items: center;
   justify-content: space-between;
   position: absolute;
-  width: 481px;
+  width: 70%;
   height: 38px;
-  right: 122px;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 37px;
   z-index: 41;
 }
@@ -454,44 +275,41 @@ button {
 }
 .groups-9 {
   position: relative;
-  width: 736px;
+  width: 93%;
   height: 553px;
-  margin: 0 0 0 30px;
+  margin: 0 auto;
   background: rgba(0, 0, 0, 0);
   z-index: 24;
 }
 .background-a {
   position: absolute;
-  width: 733px;
+  width: 100%;
   height: 547px;
-  right: 0;
-  bottom: 3px;
   background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/7vUZLCadqa.png)
     no-repeat center;
-  background-size: cover;
+  background-size: contain;
   z-index: 25;
 }
 .groups-b {
   position: absolute;
-  width: 736px;
+  width: 100%;
   height: 235px;
-  right: 0;
   bottom: 315px;
   background: rgba(0, 0, 0, 0);
   z-index: 30;
 }
 .flex-row-bc {
   position: relative;
-  width: 418px;
+  width: 80%;
   height: 52px;
-  margin: 44px 0 0 162px;
+  margin: 44px auto 0;
   z-index: 35;
 }
 .ticket {
   position: absolute;
-  width: 284px;
+  width: 60%;
   height: 51px;
-  right: 134px;
+  left: 0;
   bottom: 1px;
   font-family: Inter, var(--default-font-family);
   font-size: 40.400001525878906px;
@@ -569,19 +387,20 @@ button {
   display: block;
   position: relative;
   height: 42px;
-  margin: 50px 0 0 212px;
+  margin: 50px auto 0;
   color: #a1a0b7;
   font-family: Inter, var(--default-font-family);
   font-size: 34.79999923706055px;
   font-weight: 500;
   line-height: 42px;
-  text-align: left;
+  text-align: center;
   white-space: nowrap;
   z-index: 31;
+  width: 80%;
 }
 .image-d {
   position: relative;
-  width: 734px;
+  width: 100%;
   height: 1px;
   margin: 47px 0 0 0;
   border: 2px dashed #c3b7f0;
@@ -589,9 +408,8 @@ button {
 }
 .groups-e {
   position: absolute;
-  width: 736px;
+  width: 100%;
   height: 314px;
-  right: 0;
   bottom: 0;
   font-size: 0px;
   background: rgba(0, 0, 0, 0);
@@ -601,105 +419,90 @@ button {
   display: block;
   position: relative;
   height: 93px;
-  margin: 45px 0 0 207px;
+  margin: 45px auto 0;
   color: #4b4d57;
   font-family: Inter, var(--default-font-family);
   font-size: 69.5px;
   font-weight: 400;
   line-height: 84.111px;
-  text-align: left;
+  text-align: center;
   white-space: nowrap;
   z-index: 28;
   cursor: pointer;
-  transition: all 0.2s;
+  width: 80%;
 }
-
-/* Стили для редактируемых полей */
-[contenteditable="true"] {
-  cursor: text;
-  outline: none;
-  min-height: 1em;
-}
-
-[contenteditable="true"]:focus {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
-}
-
 .no-95 {
   display: block;
   position: relative;
   height: 65px;
-  margin: 48px 0 0 298px;
+  margin: 48px auto 0;
   color: #454851;
   font-family: Inter, var(--default-font-family);
   font-size: 53.400001525878906px;
   font-weight: 500;
   line-height: 64.626px;
-  text-align: left;
+  text-align: center;
   white-space: nowrap;
   z-index: 27;
   cursor: pointer;
-  transition: all 0.2s;
+  width: 80%;
 }
 .groups-f {
   position: relative;
-  width: 738px;
+  width: 93%;
   height: 107px;
-  margin: 101px 0 0 28px;
+  margin: 101px auto 0;
   background: rgba(0, 0, 0, 0);
   z-index: 16;
+  display: flex;
+  justify-content: space-between;
 }
 .button-10 {
-  position: absolute;
-  width: 373px;
+  position: relative;
+  width: 48%;
   height: 107px;
-  right: 0;
-  bottom: 0;
   background: rgba(0, 0, 0, 0);
   z-index: 17;
 }
 .background-11 {
   position: relative;
-  width: 365px;
+  width: 100%;
   height: 99px;
-  margin: 5px 0 0 5px;
+  margin: 5px 0 0 0;
   background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/GcabvcuBrM.png)
     no-repeat center;
-  background-size: cover;
+  background-size: contain;
   z-index: 18;
 }
 .buy-ticket {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   position: absolute;
   height: 40px;
-  right: 71px;
+  width: 100%;
   bottom: 31px;
   color: #f4d0eb;
   font-family: Inter, var(--default-font-family);
   font-size: 27.399999618530273px;
   font-weight: 500;
   line-height: 33.16px;
-  text-align: left;
+  text-align: center;
   white-space: nowrap;
   z-index: 19;
 }
 .button-12 {
-  position: absolute;
-  width: 341px;
+  position: relative;
+  width: 48%;
   height: 107px;
-  right: 397px;
-  bottom: 0;
   background: rgba(0, 0, 0, 0);
   z-index: 20;
 }
 .background-13 {
   position: relative;
-  width: 332px;
+  width: 100%;
   height: 99px;
-  margin: 5px 0 0 5px;
+  margin: 5px 0 0 0;
   background: #fefefe;
   border: 1px solid #e7e0f8;
   z-index: 21;
@@ -708,179 +511,242 @@ button {
 .present {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   position: absolute;
   height: 39px;
-  right: 68px;
+  width: 100%;
   bottom: 29px;
   color: #55565b;
   font-family: Inter, var(--default-font-family);
   font-size: 31.5px;
   font-weight: 500;
   line-height: 38.122px;
-  text-align: left;
+  text-align: center;
   white-space: nowrap;
   z-index: 22;
 }
 .background-14 {
   position: relative;
-  width: 790px;
+  width: 100%;
   height: 134px;
   margin: -2px 0 0 0;
   background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/f72xLyELpK.png)
     no-repeat center;
   background-size: cover;
   z-index: 1;
-  overflow: visible auto;
 }
 .groups-15 {
   position: relative;
-  width: 790px;
+  width: 100%;
   height: 133px;
   margin: 2px 0 0 0;
   background: rgba(0, 0, 0, 0);
   z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-.groups-16 {
-  position: absolute;
-  width: 202px;
-  height: 126px;
-  right: 393px;
-  bottom: 6px;
+.groups-16,
+.groups-18,
+.groups-1b,
+.groups-1d {
+  position: relative;
+  width: 20%;
+  height: auto;
   background: rgba(0, 0, 0, 0);
-  z-index: 9;
+  text-align: center;
 }
-.image-17 {
+.image-17,
+.image-19,
+.image-1c,
+.image-1e {
   position: relative;
   width: 33px;
   height: 39px;
-  margin: 20px 0 0 87px;
+  margin: 0 auto;
+  background-size: cover;
+}
+.image-17 {
   background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/m7NXfjTwMY.png)
     no-repeat center;
-  background-size: cover;
-  z-index: 11;
 }
-.history {
+.image-19 {
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/bzGRyX31A3.png)
+    no-repeat center;
+}
+.image-1c {
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/S4j53JCxXc.png)
+    no-repeat center;
+}
+.image-1e {
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/2NWKWEaOmo.png)
+    no-repeat center;
+}
+.history,
+.my-ticket-1a,
+.payment,
+.menu {
   display: block;
   position: relative;
   height: 28px;
-  margin: 9px 0 0 54px;
+  margin: 9px auto 0;
   color: #a1a0b6;
   font-family: Inter, var(--default-font-family);
   font-size: 23.700000762939453px;
   font-weight: 400;
   line-height: 28px;
-  text-align: left;
+  text-align: center;
   white-space: nowrap;
-  z-index: 10;
-}
-.groups-18 {
-  position: absolute;
-  width: 202px;
-  height: 124px;
-  right: 588px;
-  bottom: 8px;
-  background: rgba(0, 0, 0, 0);
-  z-index: 12;
-}
-.image-19 {
-  position: relative;
-  width: 45px;
-  height: 38px;
-  margin: 20px 0 0 77px;
-  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/bzGRyX31A3.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 14;
 }
 .my-ticket-1a {
-  display: block;
-  position: relative;
-  height: 27px;
-  margin: 8px 0 0 37px;
   color: #59595d;
-  font-family: Inter, var(--default-font-family);
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 27px;
-  text-align: left;
-  white-space: nowrap;
-  z-index: 13;
-}
-.groups-1b {
-  position: absolute;
-  width: 197px;
-  height: 119px;
-  right: 195px;
-  bottom: 13px;
-  background: rgba(0, 0, 0, 0);
-  z-index: 6;
-}
-.image-1c {
-  position: relative;
-  width: 41px;
-  height: 36px;
-  margin: 21px 0 0 79px;
-  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/S4j53JCxXc.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 8;
 }
 .payment {
-  display: block;
-  position: relative;
-  height: 24px;
-  margin: 11px 0 0 57px;
   color: #acaabe;
-  font-family: Inter, var(--default-font-family);
-  font-size: 23.799999237060547px;
-  font-weight: 400;
-  line-height: 24px;
-  text-align: left;
-  white-space: nowrap;
-  z-index: 7;
-}
-.groups-1d {
-  position: absolute;
-  width: 192px;
-  height: 118px;
-  right: 0;
-  bottom: 14px;
-  background: rgba(0, 0, 0, 0);
-  z-index: 3;
-}
-.image-1e {
-  position: relative;
-  width: 43px;
-  height: 42px;
-  margin: 18px 0 0 77px;
-  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/2NWKWEaOmo.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 5;
 }
 .menu {
-  display: block;
-  position: relative;
-  height: 24px;
-  margin: 8px 0 0 64px;
   color: #aaa8bc;
-  font-family: Inter, var(--default-font-family);
-  font-size: 23.799999237060547px;
-  font-weight: 400;
-  line-height: 24px;
-  text-align: left;
-  white-space: nowrap;
-  z-index: 4;
 }
 .background-1f {
   position: absolute;
-  width: 790px;
+  width: 100%;
   height: 106px;
-  right: 0;
-  bottom: 1334px;
   background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/4QyCfA8GSH.png)
     no-repeat center;
   background-size: cover;
   z-index: 49;
+  display: none;
+}
+
+/* Стили для редактируемых полей */
+[contenteditable="true"] {
+  cursor: text;
+  outline: none;
+  min-height: 1em;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+[contenteditable="true"]:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* ПРОСТАЯ АДАПТИВНОСТЬ ДЛЯ ВСЕХ ТЕЛЕФОНОВ */
+@media only screen and (max-width: 768px) {
+  .main-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+  
+  /* Уменьшаем шрифты пропорционально */
+  .my-ticket {
+    font-size: 28px !important;
+  }
+  
+  .time, .date {
+    font-size: 32px !important;
+  }
+  
+  .number-44, .number-20 {
+    font-size: 60px !important;
+  }
+  
+  .ab-531-25 {
+    font-size: 48px !important;
+  }
+  
+  .no-95 {
+    font-size: 36px !important;
+  }
+  
+  .mpv-vpopat {
+    font-size: 24px !important;
+  }
+  
+  .buy-ticket, .present {
+    font-size: 20px !important;
+  }
+  
+  .history, .my-ticket-1a, .payment, .menu {
+    font-size: 16px !important;
+  }
+  
+  /* Уменьшаем высоты */
+  .background {
+    height: 80px;
+    border-radius: 20px 20px 0 0;
+  }
+  
+  .time, .date {
+    bottom: 20px;
+  }
+  
+  .background-6 {
+    height: 180px;
+  }
+  
+  .groups-9 {
+    height: 450px;
+  }
+  
+  .background-a {
+    height: 450px;
+  }
+  
+  .groups-f {
+    height: 80px;
+    margin-top: 50px;
+  }
+  
+  .button-10, .button-12 {
+    height: 80px;
+  }
+  
+  .background-11, .background-13 {
+    height: 70px;
+  }
+  
+  .background-14 {
+    height: 100px;
+  }
+  
+  .groups-15 {
+    height: 100px;
+  }
+  
+  .image-17, .image-19, .image-1c, .image-1e {
+    width: 24px;
+    height: 28px;
+  }
+}
+
+/* Для очень маленьких экранов */
+@media only screen and (max-width: 480px) {
+  .time, .date {
+    font-size: 24px !important;
+  }
+  
+  .number-44, .number-20 {
+    font-size: 48px !important;
+  }
+  
+  .ab-531-25 {
+    font-size: 36px !important;
+  }
+  
+  .no-95 {
+    font-size: 28px !important;
+  }
+  
+  .groups-f {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+  }
+  
+  .button-10, .button-12 {
+    width: 100%;
+    height: 70px;
+  }
 }
