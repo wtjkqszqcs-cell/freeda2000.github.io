@@ -5,41 +5,43 @@
     "Source Han Sans CN", sans-serif;
 }
 
-* {
+.main-container {
+  overflow: hidden;
+}
+
+.main-container,
+.main-container * {
   box-sizing: border-box;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
+input,
+select,
+textarea,
+button {
+  outline: 0;
 }
 
-/* БАЗОВЫЕ СТИЛИ ДЛЯ ВСЕХ УСТРОЙСТВ */
 .main-container {
   position: relative;
-  width: 100%;
-  max-width: 790px; /* Максимальная ширина как в макете */
-  min-height: 100vh;
+  width: 790px;
+  height: 1440px;
   margin: 0 auto;
   background: rgba(0, 0, 0, 0);
   overflow: hidden;
 }
-
 .root {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
+  position: absolute;
+  height: 1440px;
+  top: 0;
+  right: 0;
+  left: 0;
   background: rgba(252, 252, 252, 0);
 }
-
-/* СТИЛИ ДЛЯ ДЕСКТОПА (остаются как были, но с добавлением %) */
 .groups {
   position: relative;
-  width: 100%;
+  width: 790px;
   height: 106px;
+  margin: 0 0 0 0;
   background: rgba(0, 0, 0, 0);
   z-index: 48;
 }
@@ -49,15 +51,14 @@ html, body {
   justify-content: flex-start;
   position: absolute;
   height: 43px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 550px;
   bottom: 36px;
   color: #505259;
   font-family: Inter, var(--default-font-family);
   font-size: 38.599998474121094px;
   font-weight: 500;
   line-height: 43px;
-  text-align: center;
+  text-align: left;
   white-space: nowrap;
   z-index: 52;
 }
@@ -85,32 +86,38 @@ html, body {
 }
 .image-2 {
   position: relative;
-  width: 100%;
-  height: auto;
+  width: 790px;
+  height: 1201px;
+  margin: 0 0 0 0;
   background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/ACPDDKQJXV.png)
     no-repeat center;
   background-size: cover;
   z-index: 15;
+  overflow: visible auto;
 }
 .groups-3 {
   position: relative;
-  width: 100%;
-  height: auto;
+  width: 790px;
+  height: 960px;
+  margin: 3px 0 0 0;
   background: rgba(0, 0, 0, 0);
   z-index: 23;
+  overflow: visible auto;
 }
 .groups-4 {
   position: relative;
-  width: 94%;
+  width: 742px;
   height: 116px;
-  margin: 46px auto 0;
+  margin: 46px 0 0 27px;
   background: rgba(0, 0, 0, 0);
   z-index: 43;
+  overflow: visible auto;
 }
 .background {
   position: relative;
-  width: 100%;
+  width: 730px;
   height: 115px;
+  margin: 2px 0 0 6px;
   background: #3b4048;
   border: 1px solid #696776;
   z-index: 44;
@@ -122,7 +129,7 @@ html, body {
   justify-content: flex-start;
   position: absolute;
   height: 52px;
-  left: 20%;
+  right: 505px;
   bottom: 33px;
   color: #e9e9ea;
   font-family: Inter, var(--default-font-family);
@@ -139,7 +146,7 @@ html, body {
   justify-content: flex-start;
   position: absolute;
   height: 58px;
-  right: 5%;
+  right: 28px;
   bottom: 25px;
   color: #e2e3e4;
   font-family: Inter, var(--default-font-family);
@@ -154,8 +161,7 @@ html, body {
   position: absolute;
   width: 50px;
   height: 50px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 647px;
   bottom: 32px;
   background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/yN9xjPs7yh.png)
     no-repeat center;
@@ -164,28 +170,28 @@ html, body {
 }
 .background-6 {
   position: relative;
-  width: 93%;
+  width: 732px;
   height: 236px;
-  margin: 1px auto 0;
+  margin: 1px 0 0 32px;
   background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/fUD5nFbQNe.png)
     no-repeat center;
-  background-size: contain;
+  background-size: cover;
   z-index: 37;
+  overflow: visible auto;
 }
 .groups-7 {
   position: relative;
-  width: 100%;
+  width: 733px;
   height: 229px;
-  margin: 6px 0 0;
+  margin: 6px 0 0 -1px;
   background: rgba(0, 0, 0, 0);
   z-index: 36;
 }
 .flex-row {
   position: absolute;
-  width: 70%;
+  width: 478px;
   height: 156px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 128px;
   bottom: 39px;
   z-index: 42;
 }
@@ -193,8 +199,7 @@ html, body {
   position: absolute;
   width: 2px;
   height: 156px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 237px;
   bottom: 0;
   background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/76p9JdsuUf.png)
     no-repeat center;
@@ -224,7 +229,7 @@ html, body {
   justify-content: flex-start;
   position: absolute;
   height: 86px;
-  left: 0;
+  right: 364px;
   bottom: 60px;
   color: #42454e;
   font-family: Inter, var(--default-font-family);
@@ -240,10 +245,9 @@ html, body {
   align-items: center;
   justify-content: space-between;
   position: absolute;
-  width: 70%;
+  width: 481px;
   height: 38px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 122px;
   bottom: 37px;
   z-index: 41;
 }
@@ -275,41 +279,44 @@ html, body {
 }
 .groups-9 {
   position: relative;
-  width: 93%;
+  width: 736px;
   height: 553px;
-  margin: 0 auto;
+  margin: 0 0 0 30px;
   background: rgba(0, 0, 0, 0);
   z-index: 24;
 }
 .background-a {
   position: absolute;
-  width: 100%;
+  width: 733px;
   height: 547px;
+  right: 0;
+  bottom: 3px;
   background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/7vUZLCadqa.png)
     no-repeat center;
-  background-size: contain;
+  background-size: cover;
   z-index: 25;
 }
 .groups-b {
   position: absolute;
-  width: 100%;
+  width: 736px;
   height: 235px;
+  right: 0;
   bottom: 315px;
   background: rgba(0, 0, 0, 0);
   z-index: 30;
 }
 .flex-row-bc {
   position: relative;
-  width: 80%;
+  width: 418px;
   height: 52px;
-  margin: 44px auto 0;
+  margin: 44px 0 0 162px;
   z-index: 35;
 }
 .ticket {
   position: absolute;
-  width: 60%;
+  width: 284px;
   height: 51px;
-  left: 0;
+  right: 134px;
   bottom: 1px;
   font-family: Inter, var(--default-font-family);
   font-size: 40.400001525878906px;
@@ -387,20 +394,19 @@ html, body {
   display: block;
   position: relative;
   height: 42px;
-  margin: 50px auto 0;
+  margin: 50px 0 0 212px;
   color: #a1a0b7;
   font-family: Inter, var(--default-font-family);
   font-size: 34.79999923706055px;
   font-weight: 500;
   line-height: 42px;
-  text-align: center;
+  text-align: left;
   white-space: nowrap;
   z-index: 31;
-  width: 80%;
 }
 .image-d {
   position: relative;
-  width: 100%;
+  width: 734px;
   height: 1px;
   margin: 47px 0 0 0;
   border: 2px dashed #c3b7f0;
@@ -408,8 +414,9 @@ html, body {
 }
 .groups-e {
   position: absolute;
-  width: 100%;
+  width: 736px;
   height: 314px;
+  right: 0;
   bottom: 0;
   font-size: 0px;
   background: rgba(0, 0, 0, 0);
@@ -419,90 +426,97 @@ html, body {
   display: block;
   position: relative;
   height: 93px;
-  margin: 45px auto 0;
+  margin: 45px 0 0 207px;
   color: #4b4d57;
   font-family: Inter, var(--default-font-family);
   font-size: 69.5px;
   font-weight: 400;
   line-height: 84.111px;
-  text-align: center;
+  text-align: left;
   white-space: nowrap;
   z-index: 28;
+  /* Добавляем стили для редактирования */
   cursor: pointer;
-  width: 80%;
+  transition: all 0.2s;
+  outline: none;
 }
+
 .no-95 {
   display: block;
   position: relative;
   height: 65px;
-  margin: 48px auto 0;
+  margin: 48px 0 0 298px;
   color: #454851;
   font-family: Inter, var(--default-font-family);
   font-size: 53.400001525878906px;
   font-weight: 500;
   line-height: 64.626px;
-  text-align: center;
+  text-align: left;
   white-space: nowrap;
   z-index: 27;
+  /* Добавляем стили для редактирования */
   cursor: pointer;
-  width: 80%;
+  transition: all 0.2s;
+  outline: none;
 }
 .groups-f {
   position: relative;
-  width: 93%;
+  width: 738px;
   height: 107px;
-  margin: 101px auto 0;
+  margin: 101px 0 0 28px;
   background: rgba(0, 0, 0, 0);
   z-index: 16;
-  display: flex;
-  justify-content: space-between;
 }
 .button-10 {
-  position: relative;
-  width: 48%;
+  position: absolute;
+  width: 373px;
   height: 107px;
+  right: 0;
+  bottom: 0;
   background: rgba(0, 0, 0, 0);
   z-index: 17;
 }
 .background-11 {
   position: relative;
-  width: 100%;
+  width: 365px;
   height: 99px;
-  margin: 5px 0 0 0;
+  margin: 5px 0 0 5px;
   background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/GcabvcuBrM.png)
     no-repeat center;
-  background-size: contain;
+  background-size: cover;
   z-index: 18;
 }
 .buy-ticket {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   position: absolute;
   height: 40px;
-  width: 100%;
+  right: 71px;
   bottom: 31px;
   color: #f4d0eb;
   font-family: Inter, var(--default-font-family);
   font-size: 27.399999618530273px;
   font-weight: 500;
   line-height: 33.16px;
-  text-align: center;
+  text-align: left;
   white-space: nowrap;
   z-index: 19;
 }
 .button-12 {
-  position: relative;
-  width: 48%;
+  position: absolute;
+  width: 341px;
   height: 107px;
+  right: 397px;
+  bottom: 0;
   background: rgba(0, 0, 0, 0);
   z-index: 20;
 }
 .background-13 {
   position: relative;
-  width: 100%;
+  width: 332px;
   height: 99px;
-  margin: 5px 0 0 0;
+  margin: 5px 0 0 5px;
   background: #fefefe;
   border: 1px solid #e7e0f8;
   z-index: 21;
@@ -511,242 +525,338 @@ html, body {
 .present {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   position: absolute;
   height: 39px;
-  width: 100%;
+  right: 68px;
   bottom: 29px;
   color: #55565b;
   font-family: Inter, var(--default-font-family);
   font-size: 31.5px;
   font-weight: 500;
   line-height: 38.122px;
-  text-align: center;
+  text-align: left;
   white-space: nowrap;
   z-index: 22;
 }
 .background-14 {
   position: relative;
-  width: 100%;
+  width: 790px;
   height: 134px;
   margin: -2px 0 0 0;
   background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/f72xLyELpK.png)
     no-repeat center;
   background-size: cover;
   z-index: 1;
+  overflow: visible auto;
 }
 .groups-15 {
   position: relative;
-  width: 100%;
+  width: 790px;
   height: 133px;
   margin: 2px 0 0 0;
   background: rgba(0, 0, 0, 0);
   z-index: 2;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
-.groups-16,
-.groups-18,
-.groups-1b,
-.groups-1d {
-  position: relative;
-  width: 20%;
-  height: auto;
+.groups-16 {
+  position: absolute;
+  width: 202px;
+  height: 126px;
+  right: 393px;
+  bottom: 6px;
   background: rgba(0, 0, 0, 0);
-  text-align: center;
+  z-index: 9;
 }
-.image-17,
-.image-19,
-.image-1c,
-.image-1e {
+.image-17 {
   position: relative;
   width: 33px;
   height: 39px;
-  margin: 0 auto;
-  background-size: cover;
-}
-.image-17 {
+  margin: 20px 0 0 87px;
   background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/m7NXfjTwMY.png)
     no-repeat center;
+  background-size: cover;
+  z-index: 11;
 }
-.image-19 {
-  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/bzGRyX31A3.png)
-    no-repeat center;
-}
-.image-1c {
-  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/S4j53JCxXc.png)
-    no-repeat center;
-}
-.image-1e {
-  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/2NWKWEaOmo.png)
-    no-repeat center;
-}
-.history,
-.my-ticket-1a,
-.payment,
-.menu {
+.history {
   display: block;
   position: relative;
   height: 28px;
-  margin: 9px auto 0;
+  margin: 9px 0 0 54px;
   color: #a1a0b6;
   font-family: Inter, var(--default-font-family);
   font-size: 23.700000762939453px;
   font-weight: 400;
   line-height: 28px;
-  text-align: center;
+  text-align: left;
   white-space: nowrap;
+  z-index: 10;
+}
+.groups-18 {
+  position: absolute;
+  width: 202px;
+  height: 124px;
+  right: 588px;
+  bottom: 8px;
+  background: rgba(0, 0, 0, 0);
+  z-index: 12;
+}
+.image-19 {
+  position: relative;
+  width: 45px;
+  height: 38px;
+  margin: 20px 0 0 77px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/bzGRyX31A3.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 14;
 }
 .my-ticket-1a {
+  display: block;
+  position: relative;
+  height: 27px;
+  margin: 8px 0 0 37px;
   color: #59595d;
+  font-family: Inter, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 13;
+}
+.groups-1b {
+  position: absolute;
+  width: 197px;
+  height: 119px;
+  right: 195px;
+  bottom: 13px;
+  background: rgba(0, 0, 0, 0);
+  z-index: 6;
+}
+.image-1c {
+  position: relative;
+  width: 41px;
+  height: 36px;
+  margin: 21px 0 0 79px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/S4j53JCxXc.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 8;
 }
 .payment {
+  display: block;
+  position: relative;
+  height: 24px;
+  margin: 11px 0 0 57px;
   color: #acaabe;
+  font-family: Inter, var(--default-font-family);
+  font-size: 23.799999237060547px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 7;
+}
+.groups-1d {
+  position: absolute;
+  width: 192px;
+  height: 118px;
+  right: 0;
+  bottom: 14px;
+  background: rgba(0, 0, 0, 0);
+  z-index: 3;
+}
+.image-1e {
+  position: relative;
+  width: 43px;
+  height: 42px;
+  margin: 18px 0 0 77px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/2NWKWEaOmo.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 5;
 }
 .menu {
+  display: block;
+  position: relative;
+  height: 24px;
+  margin: 8px 0 0 64px;
   color: #aaa8bc;
+  font-family: Inter, var(--default-font-family);
+  font-size: 23.799999237060547px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 4;
 }
 .background-1f {
   position: absolute;
-  width: 100%;
+  width: 790px;
   height: 106px;
+  right: 0;
+  bottom: 1334px;
   background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-12-11/4QyCfA8GSH.png)
     no-repeat center;
   background-size: cover;
   z-index: 49;
-  display: none;
 }
 
 /* Стили для редактируемых полей */
 [contenteditable="true"] {
   cursor: text;
   outline: none;
+  padding: 2px 5px;
+  border-radius: 4px;
   min-height: 1em;
-  padding: 5px;
-  border-radius: 5px;
+}
+
+[contenteditable="true"]:hover {
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 [contenteditable="true"]:focus {
   background-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.3);
 }
 
-/* ПРОСТАЯ АДАПТИВНОСТЬ ДЛЯ ВСЕХ ТЕЛЕФОНОВ */
+/* БАЗОВАЯ АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ */
 @media only screen and (max-width: 768px) {
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
   .main-container {
-    max-width: 100%;
-    padding: 10px;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
   }
   
-  /* Уменьшаем шрифты пропорционально */
-  .my-ticket {
-    font-size: 28px !important;
+  .root {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    top: 0 !important;
   }
   
-  .time, .date {
+  .groups,
+  .image-2,
+  .groups-3,
+  .groups-4,
+  .background,
+  .background-6,
+  .groups-9,
+  .background-14 {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  .background {
+    width: 95% !important;
+    margin: 20px auto !important;
+    border-radius: 20px !important;
+  }
+  
+  .time {
+    left: 20px !important;
+    right: auto !important;
     font-size: 32px !important;
   }
   
-  .number-44, .number-20 {
-    font-size: 60px !important;
-  }
-  
-  .ab-531-25 {
-    font-size: 48px !important;
-  }
-  
-  .no-95 {
-    font-size: 36px !important;
-  }
-  
-  .mpv-vpopat {
-    font-size: 24px !important;
-  }
-  
-  .buy-ticket, .present {
-    font-size: 20px !important;
-  }
-  
-  .history, .my-ticket-1a, .payment, .menu {
-    font-size: 16px !important;
-  }
-  
-  /* Уменьшаем высоты */
-  .background {
-    height: 80px;
-    border-radius: 20px 20px 0 0;
-  }
-  
-  .time, .date {
-    bottom: 20px;
+  .date {
+    right: 20px !important;
+    left: auto !important;
+    font-size: 32px !important;
   }
   
   .background-6 {
-    height: 180px;
+    width: 95% !important;
+    margin: 20px auto !important;
   }
   
-  .groups-9 {
-    height: 450px;
-  }
-  
-  .background-a {
-    height: 450px;
-  }
-  
-  .groups-f {
-    height: 80px;
-    margin-top: 50px;
-  }
-  
-  .button-10, .button-12 {
-    height: 80px;
-  }
-  
-  .background-11, .background-13 {
-    height: 70px;
-  }
-  
-  .background-14 {
-    height: 100px;
-  }
-  
-  .groups-15 {
-    height: 100px;
-  }
-  
-  .image-17, .image-19, .image-1c, .image-1e {
-    width: 24px;
-    height: 28px;
-  }
-}
-
-/* Для очень маленьких экранов */
-@media only screen and (max-width: 480px) {
-  .time, .date {
-    font-size: 24px !important;
+  .flex-row {
+    width: 90% !important;
+    right: 5% !important;
   }
   
   .number-44, .number-20 {
-    font-size: 48px !important;
+    font-size: 64px !important;
+  }
+  
+  .groups-9 {
+    width: 95% !important;
+    margin: 20px auto !important;
   }
   
   .ab-531-25 {
-    font-size: 36px !important;
+    font-size: 48px !important;
+    margin-left: 0 !important;
+    text-align: center !important;
+    width: 100% !important;
   }
   
   .no-95 {
-    font-size: 28px !important;
+    font-size: 36px !important;
+    margin-left: 0 !important;
+    text-align: center !important;
+    width: 100% !important;
   }
   
   .groups-f {
+    width: 95% !important;
+    margin: 40px auto !important;
+    display: flex;
     flex-direction: column;
-    height: auto;
     gap: 15px;
   }
   
   .button-10, .button-12 {
-    width: 100%;
-    height: 70px;
+    position: relative !important;
+    width: 100% !important;
+    right: 0 !important;
+    margin-bottom: 10px !important;
+  }
+  
+  .background-14 {
+    width: 100% !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+  }
+  
+  .groups-15 {
+    width: 100% !important;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .groups-16, .groups-18, .groups-1b, .groups-1d {
+    position: relative !important;
+    width: auto !important;
+    height: auto !important;
+    right: 0 !important;
+    bottom: 0 !important;
+  }
+  
+  .background-1f {
+    display: none !important;
+  }
+}
+
+/* Для iPhone в горизонтальной ориентации */
+@media only screen and (max-width: 896px) and (orientation: landscape) {
+  .main-container {
+    height: auto !important;
+  }
+  
+  .background-14 {
+    position: relative !important;
   }
 }
